@@ -1,0 +1,75 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+agregar-acumulado	src/tp/basic.clj	/^(defn agregar-acumulado [acumulado primero resto]$/;"	f
+anular-invalidos	src/tp/basic.clj	/^(defn anular-invalidos [sentencia]$/;"	f
+aplicar	src/tp/basic.clj	/^(defn aplicar$/;"	f
+aridad	src/tp/basic.clj	/^(defn aridad [token]$/;"	f
+borrar-rem	src/tp/basic.clj	/^(defn borrar-rem [linea]$/;"	f
+buscar-lineas-restantes	src/tp/basic.clj	/^(defn buscar-lineas-restantes$/;"	f
+buscar-mensaje	src/tp/basic.clj	/^(defn buscar-mensaje [cod]$/;"	f
+buscar-sentencia	src/tp/basic.clj	/^(defn buscar-sentencia [nro-linea prg]$/;"	f
+calcular-expresion	src/tp/basic.clj	/^(defn calcular-expresion [expr amb]$/;"	f
+calcular-rpn	src/tp/basic.clj	/^(defn calcular-rpn [tokens nro-linea]$/;"	f
+cargar-arch	src/tp/basic.clj	/^(defn cargar-arch [nom nro-linea]$/;"	f
+cargar-linea	src/tp/basic.clj	/^(defn cargar-linea [linea amb]$/;"	f
+cero-entero?	src/tp/basic.clj	/^(defn cero-entero? [n]$/;"	f
+conj-r	src/tp/basic.clj	/^(defn conj-r [e l]$/;"	f
+contar-sentencias	src/tp/basic.clj	/^(defn contar-sentencias [nro-linea amb]$/;"	f
+continuar-linea	src/tp/basic.clj	/^(defn continuar-linea [amb]$/;"	f
+continuar-programa	src/tp/basic.clj	/^(defn continuar-programa [amb]$/;"	f
+dar-error	src/tp/basic.clj	/^(defn dar-error [cod prog-ptrs]$/;"	f
+desambiguar	src/tp/basic.clj	/^(defn desambiguar [expr]$/;"	f
+desambiguar-comas	src/tp/basic.clj	/^(defn desambiguar-comas$/;"	f
+desambiguar-mas-menos	src/tp/basic.clj	/^(defn desambiguar-mas-menos$/;"	f
+desambiguar-mid	src/tp/basic.clj	/^(defn desambiguar-mid$/;"	f
+desambiguar-mid-ternario	src/tp/basic.clj	/^(defn desambiguar-mid-ternario [expr]$/;"	f
+driver-loop	src/tp/basic.clj	/^(defn driver-loop$/;"	f
+ejecutar-asignacion	src/tp/basic.clj	/^(defn ejecutar-asignacion [sentencia amb]$/;"	f
+ejecutar-programa	src/tp/basic.clj	/^(defn ejecutar-programa$/;"	f
+eliminar-cero-decimal	src/tp/basic.clj	/^(defn eliminar-cero-decimal [n]$/;"	f
+eliminar-cero-entero	src/tp/basic.clj	/^(defn eliminar-cero-entero [n] $/;"	f
+eliminar-linea	src/tp/basic.clj	/^(defn eliminar-linea [prog n]$/;"	f
+eliminar-mas-unario	src/tp/basic.clj	/^(defn eliminar-mas-unario [expr]$/;"	f
+eliminar-rem	src/tp/basic.clj	/^(defn eliminar-rem [prg]$/;"	f
+evaluar	src/tp/basic.clj	/^(defn evaluar [sentencia amb]$/;"	f
+evaluar-linea	src/tp/basic.clj	/^(defn evaluar-linea$/;"	f
+expandir	src/tp/basic.clj	/^(defn expandir [acumulado resto]$/;"	f
+expandir-nexts	src/tp/basic.clj	/^(defn expandir-nexts [n]$/;"	f
+extraer-data	src/tp/basic.clj	/^(defn extraer-data [prg]$/;"	f
+grabar-arch	src/tp/basic.clj	/^(defn grabar-arch [nom amb]$/;"	f
+imprimir	src/tp/basic.clj	/^(defn imprimir$/;"	f
+indice-linea	src/tp/basic.clj	/^(defn indice-linea [nro-linea prg]$/;"	f
+indice-rem	src/tp/basic.clj	/^(defn indice-rem [linea]$/;"	f
+insertar-prog	src/tp/basic.clj	/^(defn insertar-prog [prog linea]$/;"	f
+leer-con-enter	src/tp/basic.clj	/^(defn leer-con-enter$/;"	f
+leer-data	src/tp/basic.clj	/^(defn leer-data$/;"	f
+linea-repetida?	src/tp/basic.clj	/^(defn linea-repetida? [prog n]$/;"	f
+main	src/tp/core.clj	/^(defn main$/;"	f
+menor-numero	src/tp/basic.clj	/^(defn menor-numero [l1 l2]$/;"	f
+misma-linea	src/tp/basic.clj	/^(defn misma-linea [n linea]$/;"	f
+mostrar-listado	src/tp/basic.clj	/^(defn mostrar-listado$/;"	f
+n	src/tp/basic.clj	/^; user=> (def n (list '(PRINT 1) (list 'NEXT 'A (symbol ",") 'B)))$/;"	d
+obtener-lineas-data	src/tp/basic.clj	/^(defn obtener-lineas-data [prg]$/;"	f
+operador?	src/tp/basic.clj	/^(defn operador? [x]$/;"	f
+palabra-reservada?	src/tp/basic.clj	/^(defn palabra-reservada? [x]$/;"	f
+pasar-a-entero	src/tp/basic.clj	/^(defn pasar-a-entero [n]$/;"	f
+precedencia	src/tp/basic.clj	/^(defn precedencia [token]$/;"	f
+preprocesar-expresion	src/tp/basic.clj	/^(defn preprocesar-expresion [expr amb]$/;"	f
+remplazar-menos-unario	src/tp/basic.clj	/^(defn remplazar-menos-unario [expr]$/;"	f
+retornar-al-for	src/tp/basic.clj	/^(defn retornar-al-for [amb var-next]$/;"	f
+seleccionar-destino-de-on	src/tp/basic.clj	/^(defn seleccionar-destino-de-on$/;"	f
+shunting-yard	src/tp/basic.clj	/^(defn shunting-yard [tokens]$/;"	f
+string-a-tokens	src/tp/basic.clj	/^(defn string-a-tokens [s]$/;"	f
+tiene-3-parametros?	src/tp/basic.clj	/^(defn tiene-3-parametros? [parametros]$/;"	f
+tiene-id?	src/tp/basic.clj	/^(defn tiene-id? [id linea]$/;"	f
+tiene-linea-nro?	src/tp/basic.clj	/^(defn tiene-linea-nro? [nro nro-lineas]$/;"	f
+tp.basic	src/tp/basic.clj	/^(ns tp.basic)$/;"	n
+tp.core	src/tp/core.clj	/^(ns tp.core)$/;"	n
+tp.core-test	test/tp/core_test.clj	/^(ns tp.core-test$/;"	n
+variable-float?	src/tp/basic.clj	/^(defn variable-float? [x]$/;"	f
+variable-integer?	src/tp/basic.clj	/^(defn variable-integer? [x]$/;"	f
+variable-string?	src/tp/basic.clj	/^(defn variable-string? [x]$/;"	f
