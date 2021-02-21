@@ -565,10 +565,8 @@
 ; con un resultado (usado luego por evaluar-linea) y un ambiente
 ; actualizado
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;  DATA [X] READ[X] RESTORE [X] CLEAR [X] LET/=[X] LIST[X] END [X]
-(defn evaluar [sentencia amb]
-  (do (println) (print "SENTENCIA: ") (println sentencia) (print "AMB: ") (println amb) (println)
-      (if (or (contains? (set sentencia) nil) (and (palabra-reservada? (first sentencia)) (= (second sentencia) '=)))
+(defn evaluar [sentencia amb] 
+    (if (or (contains? (set sentencia) nil) (and (palabra-reservada? (first sentencia)) (= (second sentencia) '=)))
       (do (dar-error 16 (amb 1)) [nil amb])  ; Syntax error  
       (case (first sentencia)
         PRINT (let [args (next sentencia), resu (imprimir args amb)]
@@ -663,7 +661,7 @@
                      [nil amb]
                      [:sin-errores resu]))
             (do (dar-error 16 (amb 1)) [nil amb]))))  ; Syntax error
-))
+)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; aplicar: aplica un operador a sus operandos y retorna el valor
@@ -886,7 +884,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defn variable-float? [x]
   (and (some? (re-matches #"[A-Z]\w*" (str x))) (not (palabra-reservada? x)) (not (string? x)))) 
-;  (and (not (number? x)) (not (string? x)) (not (operador? x)) (not (= (symbol ".") x)) (not (variable-integer? x)) (not (variable-string? x))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; variable-integer?: predicado para determinar si un identificador
@@ -1110,46 +1107,6 @@
 
 (defn desambiguar [expr]
   ((comp desambiguar-mas-menos desambiguar-mid) expr))
-;  (->> expr
-;       (desambiguar-mid-ternario)
-;       (eliminar-mas-unario)
-;       (remplazar-menos-unario)))
-;
-;(defn desambiguar-mid-ternario [expr]
-;  (if (and (= 'MID$ (first expr)) (tiene-3-parametros? (rest expr)))
-;    (map #(if (= 'MID$ %) 'MID3$ %) expr)
-;  expr))
-;
-;(defn tiene-3-parametros? [parametros]
-;  (let [comas (filter #{(symbol ",")} (rest parametros))] 
-;    (= 2 (count comas))))
-;
-;(defn eliminar-mas-unario 
-;  ([expr] (eliminar-mas-unario '() (first expr) (rest expr)))
-;  ([acum prim resto] 
-;    (if (empty? resto)
-;      (concat acum (list prim))
-;      (let [nuevo-acum 
-;          (if (and (= prim (symbol "+")) (or (= (symbol ",") (last acum)) (= (symbol "(") (last acum)) (empty? acum)))
-;            acum
-;          (concat acum (list prim))),
-;        nuevo-prim (first resto),
-;        nuevo-resto (rest resto)]
-;      (eliminar-mas-unario nuevo-acum nuevo-prim nuevo-resto)))))
-;
-;(defn remplazar-menos-unario 
-;  ([expr] (remplazar-menos-unario '() (first expr) (rest expr)))
-;  ([acum prim resto] 
-;    (if (empty? resto)
-;      (concat acum (list prim))
-;      (let [nuevo-acum 
-;          (if (and (= prim (symbol "-")) (or (= (symbol ",") (last acum)) (= (symbol "(") (last acum)) (empty? acum)))
-;            (concat acum (list '-u))
-;          (concat acum (list prim))),
-;        nuevo-prim (first resto),
-;        nuevo-resto (rest resto)]
-;      (remplazar-menos-unario nuevo-acum nuevo-prim nuevo-resto)))))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; precedencia: recibe un token y retorna el valor de su
