@@ -33,4 +33,4 @@ user=>(driver-loop)
 ```
 
 ## Licencia
-Este repositorio esta bajo la licencia del MIT
+Este repositorio esta bajo la licencia MIT
